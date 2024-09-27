@@ -1,0 +1,212 @@
+body {
+  background-color: rgb(255, 255, 255);
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+/* 当屏幕宽度小于1024px时 */
+@media screen and (max-width: 1024px) {
+  body {
+    background-image: url('https://moe.jitsu.top/img/?sort=mp');
+  }
+
+  .sidebar-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translate(0, -50%);
+  }
+
+  .sidebar-box {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+  }
+
+  .sticky {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px) brightness(80%);
+  }
+
+  .sticky2 {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px) brightness(80%);
+  }
+
+  .sidebar-box,
+  .sticky {
+    transition: background-color 0.5s ease;
+  }
+
+  .sidebar-box-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    border: 3px solid rgb(0, 0, 0, 0.8);
+    position: absolute;
+    top: 2px;
+    left: 5px;
+  }
+
+  .sidebar-button {
+    cursor: pointer;
+    position: absolute;
+    left: 88%;
+    top: 20px;
+  }
+
+  .sidebar-button-line {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    border-radius: 10px;
+  }
+
+  .sidebar-main {
+    position: fixed;
+    top: 50px;
+    margin: 20px 0;
+    line-height: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateX(-100%);
+    /* 初始位置 */
+  }
+
+  .sidebar-main-open {
+    transform: translateX(0);
+    /* 初始位置 */
+  }
+
+  .sidebar-main-open,
+  .sidebar-main {
+    transition: transform 0.5s ease;
+  }
+
+  #sidebar-text-a,
+  #sidebar-join {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+  }
+
+  #sidebar-text-a a,
+  #sidebar-join a {
+    position: absolute;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  #sidebar-text-a a:hover,
+  #sidebar-text-a:hover a,
+  #sidebar-join a:hover,
+  #sidebar-join:hover a {
+    color: #000;
+  }
+
+  #sidebar-text-a:hover,
+  #sidebar-join:hover {
+    background-color: #ffffff;
+  }
+
+  .sidebar-img {
+    display: none;
+  }
+}
+
+/* 当屏幕宽度大于1025px时 */
+@media screen and (min-width: 1025px) {
+  body {
+    background-image: url('https://moe.jitsu.top/img/?sort=pc');
+    cursor: url('./image.png'), auto;
+  }
+
+  .sidebar-box {
+    display: none;
+  }
+
+  #sidebar-join {
+    display: none;
+  }
+
+  .sidebar-img,
+  .sticky-img {
+    transition: all 0.5s ease;
+  }
+
+  .sidebar-main {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    height: 70px;
+    transition: background-color 0.5s ease;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar-text {
+    display: flex;
+    width: 80px;
+    height: 70px;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+  }
+
+  .sidebar-text a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .sidebar-text a:hover,
+  .sidebar-text:hover a {
+    color: #000;
+  }
+
+  #sidebar-text-a:hover {
+    background-color: #ffffff;
+  }
+
+  .sidebar-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    border: 3px solid rgb(0, 0, 0, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .sticky-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    border: 3px solid rgb(0, 0, 0, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+  }
+
+  .sticky {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px) brightness(80%);
+  }
+}
